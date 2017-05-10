@@ -12,3 +12,13 @@ test:
     - /var/run/docker.sock:/var/run/docker.sock
   commands:
     - docker run johnhope55/go-example-webserver /test.sh
+
+push:
+  image: docker
+  environment:
+    - PASS=${HUB_PASS}
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+  commands:
+    - docker login -u johnhope55 -p ${HUB_PASS}
+    - docker push johnhope55/go-example-webserver
