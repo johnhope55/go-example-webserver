@@ -11,4 +11,4 @@ test:
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
   commands:
-    - docker run <username>/example-webserver /test.sh
+    - docker run johnhope55/example-webserver /test.sh
