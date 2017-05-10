@@ -21,4 +21,4 @@ push:
     - /var/run/docker.sock:/var/run/docker.sock
   commands:
     - docker login -u johnhope55 -p ${HUB_PASS}
-    - docker push johnhope55/go-example-webserver
+    - docker push johnhope5/go-example-webserver
