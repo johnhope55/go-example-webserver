@@ -4,11 +4,11 @@ pipeline:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     commands:
-      - docker build -t johnhope55/example-webserver .
+      - docker build -t johnhope55/go-example-webserver .
 
 test:
   image: docker
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
   commands:
-    - docker run johnhope55/example-webserver /test.sh
+    - docker run johnhope55/go-example-webserver /test.sh
